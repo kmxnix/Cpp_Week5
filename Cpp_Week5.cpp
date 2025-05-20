@@ -110,7 +110,6 @@ int main() {
 
             while (index < bookCount) {
                 if (compareBooks(&books[index], &target)) {
-                    cout << "도서를 찾았습니다." << endl;
                     cout << "제목: " << books[index].getTitle() << ", 저자: " << books[index].getAuthor() << endl << endl;
                     found = true;
                     break;
@@ -143,15 +142,15 @@ int main() {
             while (index < bookCount) {
                 if (compareBooks(&books[index], &target)) {
                     char newTitle[80], newAuthor[80];
-                    cout << "새 제목을 입력하세요: ";
+                    cout << "새로운 도서 제목을 입력하세요: ";
                     cin.getline(newTitle, 80);
-                    cout << "새 저자를 입력하세요: ";
+                    cout << "새로운 도서 저자를 입력하세요: ";
                     cin.getline(newAuthor, 80);
 
                     books[index].setTitle(newTitle);
                     books[index].setAuthor(newAuthor);
 
-                    cout << "도서 정보가 수정되었습니다." << endl << endl;
+                    cout << "도서 정보가 성공적으로 수정되었습니다." << endl << endl;
                     found = true;
                     break;
                 }
@@ -159,7 +158,7 @@ int main() {
             }
 
             if (!found) {
-                cout << "해당 도서를 찾을 수 없습니다." << endl << endl;
+                cout << "일치하는 도서를 찾을 수 없습니다." << endl << endl;
             }
         }
 
@@ -168,7 +167,7 @@ int main() {
         }
 
         else {
-            cout << "잘못된 입력입니다." << endl << endl;
+            cout << "정확한 번호를 입력하세요." << endl << endl;
         }
 
     } while (number != 4);
